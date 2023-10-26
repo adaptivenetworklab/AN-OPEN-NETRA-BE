@@ -4,9 +4,6 @@ from base import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('base.urls')),
     path('api/', include('base.api.urls')),
-    path('signup/', views.SignupPage, name='signup'),
-    path('login/', views.LoginPage, name='login'),
-    path('', views.HomePage, name='home'),
-    path('logout/', views.LogoutPage, name='logout'),
 ]
